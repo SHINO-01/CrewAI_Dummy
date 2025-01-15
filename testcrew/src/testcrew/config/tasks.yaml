@@ -1,0 +1,80 @@
+documentation_processing:
+  description: >
+    Primary task is to process and structure the technical documentation:
+      - Scrape all pages from ReadTheDocs systematically
+      - Process content maintaining original structure and formatting
+      - Create semantic embeddings for effective search
+      - Map relationships between documentation sections
+      - Track and maintain version information
+      - Identify key concepts and their dependencies
+      - Create index of code examples and configurations
+  expected_output: >
+    - Structured documentation corpus in vector store
+      - Relationship map of documentation sections
+      - Version control information
+      - Indexed code examples and configurations
+      - List of key concepts and their relationships
+      - Documentation update timestamp
+      - Processing status report
+  agent: documentation_parser_agent
+
+query_processing:
+  description: >
+    Handle user interactions and query processing:
+      - Parse natural language queries for intent
+      - Maintain conversational context
+      - Track user's technical background level
+      - Handle clarification requests when needed
+      - Manage conversation flow
+      - Track resolved and unresolved aspects of queries
+      - Ensure all user questions are addressed
+  expected_output: >
+    - Parsed query intent
+    - Required clarification points if any
+    - User technical level assessment
+    - Conversation context summary
+    - Query priority level
+    - Related previous queries if any
+    - Suggested next steps
+  agent: UI_agent
+
+knowledge_synthesis:
+  description: >
+    Connect and synthesize documentation elements:
+      - Identify relevant documentation sections
+      - Connect related concepts and examples
+      - Find similar solved problems
+      - Evaluate solution applicability
+      - Consider user's context
+      - Prepare comprehensive understanding
+      - Flag any documentation gaps
+  expected_output: >
+    - Connected relevant documentation sections
+    - List of related concepts and examples
+    - Similar solved problems references
+    - Applicability analysis
+    - Identified documentation gaps
+    - Synthesis summary
+    - Confidence score for proposed solution
+  agent: Knowledge_synth_agent
+
+solution_creation:
+  description: >
+    Create and present solutions:
+      - Develop step-by-step solution paths
+      - Include relevant code examples
+      - Provide configuration templates
+      - Add troubleshooting guidance
+      - Include validation steps
+      - Consider common pitfalls
+      - Prepare follow-up suggestions
+  expected_output: >
+    - Step-by-step solution guide
+    - Required code examples
+    - Configuration templates
+    - Troubleshooting steps
+    - Validation checkpoints
+    - Common pitfalls warnings
+    - Follow-up recommendations
+    - Success criteria
+  agent: solution_agent
