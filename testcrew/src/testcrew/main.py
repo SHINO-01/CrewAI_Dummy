@@ -5,7 +5,7 @@ import warnings
 from testcrew.crew import Testcrew
 
 def run():
-    inputs = {'documentation_url': 'https://your-docs.readthedocs.io'}
+    inputs = {'documentation_url': 'https://documentation-using-ai-agent.readthedocs.io/en/latest/'}
     Testcrew().crew().kickoff(inputs=inputs)
 
 if __name__ == "__main__":
